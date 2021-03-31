@@ -21,7 +21,7 @@ namespace weekLifeCounter
                 Console.Write($"{i} Год\t");
                 for (int k = 1; k <= 52; k++)
                 {
-                    Console.Write($"#{k}");                    
+                    Console.Write($"#{k} ");                    
                 }
                 Console.WriteLine();
                 
