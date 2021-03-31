@@ -1,0 +1,7 @@
+D:\Repos\weekLifeCounter\weekLifeCounter\obj\Debug\weekLifeCounter.csprojAssemblyReference.cache
+D:\Repos\weekLifeCounter\weekLifeCounter\obj\Debug\weekLifeCounter.csproj.CoreCompileInputs.cache
+D:\Repos\weekLifeCounter\weekLifeCounter\bin\Debug\weekLifeCounter.exe.config
+D:\Repos\weekLifeCounter\weekLifeCounter\bin\Debug\weekLifeCounter.exe
+D:\Repos\weekLifeCounter\weekLifeCounter\bin\Debug\weekLifeCounter.pdb
+D:\Repos\weekLifeCounter\weekLifeCounter\obj\Debug\weekLifeCounter.exe
+D:\Repos\weekLifeCounter\weekLifeCounter\obj\Debug\weekLifeCounter.pdb
