@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,12 +17,32 @@ namespace weekLifeCounter
             DateTime thisDay = DateTime.Now;
             int thisYear = Convert.ToInt32(thisDay.ToString("yyyy"));
 
-            for (int i = birthYear; i < thisYear; i++)
+            int lifeEndYear = birthYear + 80;
+
+            // Get week num
+            CultureInfo myCI = new CultureInfo("ru-RU");
+            Calendar myCal = myCI.Calendar;
+
+            // Gets the DTFI properties required by GetWeekOfYear.
+            CalendarWeekRule myCWR = myCI.DateTimeFormat.CalendarWeekRule;
+            DayOfWeek myFirstDOW = myCI.DateTimeFormat.FirstDayOfWeek;
+
+            int weekNum = myCal.GetWeekOfYear(DateTime.Now, myCWR, myFirstDOW);
+
+            for (int i = birthYear; i < lifeEndYear; i++)
             {
                 Console.Write($"{i} Год\t");
                 for (int k = 1; k <= 52; k++)
                 {
-                    Console.Write($"#{k} ");                    
+                    
+                    if (i < thisYear || k > weekNum )
+                    {
+                        Console.Write("X ");
+                    }
+                    else
+                    {
+                        Console.Write("O ");
+                    }
                 }
                 Console.WriteLine();
                 
@@ -29,11 +50,13 @@ namespace weekLifeCounter
 
 
 
-            Console.WriteLine("Год рождения: " + birthYear);
-            Console.WriteLine("Текущий год: " + thisYear);
-            Console.WriteLine("Тебе сейчас " + (thisYear - birthYear));
-            
-            
+            Console.WriteLine("Год рождения:\t " + birthYear);
+            Console.WriteLine("Текущий год:\t " + thisYear);
+            Console.WriteLine("Тебе сейчас:\t " + (thisYear - birthYear));
+            Console.WriteLine("Дата смерти:\t " + lifeEndYear);
+            Console.WriteLine("Неделя в году:\t " + weekNum);
+
+
 
             Console.ReadKey();
 
