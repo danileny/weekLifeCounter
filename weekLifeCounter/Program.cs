@@ -14,6 +14,7 @@ namespace weekLifeCounter
             Console.Write("Введите год рождения: ");
             int birthYear = int.Parse(Console.ReadLine());
 
+
             DateTime thisDay = DateTime.Now;
             int thisYear = Convert.ToInt32(thisDay.ToString("yyyy"));
 
@@ -28,20 +29,37 @@ namespace weekLifeCounter
             DayOfWeek myFirstDOW = myCI.DateTimeFormat.FirstDayOfWeek;
 
             int weekNum = myCal.GetWeekOfYear(DateTime.Now, myCWR, myFirstDOW);
+            Console.WriteLine("Год рождения:\t " + birthYear);
+            Console.WriteLine("Текущий год:\t " + thisYear);
+            Console.WriteLine("Текущая неделя:\t " + weekNum);
+            Console.WriteLine("Тебе сейчас:\t " + (thisYear - birthYear));
+            Console.WriteLine("Дата смерти:\t " + lifeEndYear);
+            
 
             for (int i = birthYear; i < lifeEndYear; i++)
             {
                 Console.Write($"{i} Год\t");
-                for (int k = 1; k <= 52; k++)
+                for (int k = 1;k <= 52; k++)
                 {
-                    
-                    if (i < thisYear || k > weekNum )
+                    if (i < thisYear)
                     {
                         Console.Write("X ");
                     }
+                    else if (i > thisYear)
+                    {
+                        Console.Write("- ");
+                    }
                     else
                     {
-                        Console.Write("O ");
+                        if (k < weekNum)
+                        {
+                            Console.Write("X ");
+                        }
+                        else
+                        {
+                            Console.Write("- ");
+                        }
+
                     }
                 }
                 Console.WriteLine();
@@ -50,11 +68,7 @@ namespace weekLifeCounter
 
 
 
-            Console.WriteLine("Год рождения:\t " + birthYear);
-            Console.WriteLine("Текущий год:\t " + thisYear);
-            Console.WriteLine("Тебе сейчас:\t " + (thisYear - birthYear));
-            Console.WriteLine("Дата смерти:\t " + lifeEndYear);
-            Console.WriteLine("Неделя в году:\t " + weekNum);
+
 
 
 
