@@ -41,6 +41,7 @@ namespace weekLifeCounter
                 Console.Write($"{i} Год\t");
                 for (int k = 1;k <= 52; k++)
                 {
+                    System.Threading.Thread.Sleep(10);
                     if (i < thisYear)
                     {
                         Console.Write("X ");
@@ -59,25 +60,12 @@ namespace weekLifeCounter
                         {
                             Console.Write("- ");
                         }
-
                     }
                 }
                 Console.WriteLine();
                 
             }
-
-
-
-
-
-
-
             Console.ReadKey();
-
-            //System.Threading.Thread.Sleep(300);
-
-
-
         }
     }
 }
