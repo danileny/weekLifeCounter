@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Globalization;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace weekLifeCounter
 {
@@ -41,7 +37,7 @@ namespace weekLifeCounter
                 Console.Write($"{i} Год\t");
                 for (int k = 1;k <= 52; k++)
                 {
-                    System.Threading.Thread.Sleep(10);
+                    System.Threading.Thread.Sleep(1);
                     if (i < thisYear)
                     {
                         Console.Write("X ");
