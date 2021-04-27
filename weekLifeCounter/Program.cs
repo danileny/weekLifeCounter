@@ -10,6 +10,9 @@ namespace weekLifeCounter
             Console.Write("Введите год рождения: ");
             int birthYear = int.Parse(Console.ReadLine());
 //comment from vsc2
+//comment from vsc2
+//comment from vsc2
+//comment from vsc2
 
             DateTime thisDay = DateTime.Now;
             int thisYear = Convert.ToInt32(thisDay.ToString("yyyy"));
