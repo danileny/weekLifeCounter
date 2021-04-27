@@ -9,7 +9,7 @@ namespace weekLifeCounter
         {
             Console.Write("Введите год рождения: ");
             int birthYear = int.Parse(Console.ReadLine());
-
+//comment from vsc2
 
             DateTime thisDay = DateTime.Now;
             int thisYear = Convert.ToInt32(thisDay.ToString("yyyy"));
@@ -30,7 +30,7 @@ namespace weekLifeCounter
             Console.WriteLine("Текущая неделя:\t " + weekNum);
             Console.WriteLine("Тебе сейчас:\t " + (thisYear - birthYear));
             Console.WriteLine("Дата смерти:\t " + lifeEndYear);
-            
+        
 
             for (int i = birthYear; i < lifeEndYear; i++)
             {
