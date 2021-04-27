@@ -30,7 +30,6 @@ namespace weekLifeCounter
             Console.WriteLine("Тебе сейчас:\t " + (thisYear - birthYear));
             Console.WriteLine("Год смерти:\t " + lifeEndYear);
         
-
             for (int i = birthYear; i < lifeEndYear; i++)
             {
                 Console.Write($"{i} Год\t");
